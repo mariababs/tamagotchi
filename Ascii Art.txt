@@ -1,4 +1,24 @@
-eagle
+/*
+How art is categorized:
+
+Pet Art
+    any "pet" base art will have the name:
+        petAnimal
+    where "animal" is the type (cat/dog/eagle)
+
+Action Art
+    any "action" art will have the name:
+        actionTypeAnimal
+    where "type" is the specific action (box/flap/ball/etc)
+    and "animal" is the animal included in the art
+
+Food/Drink Art
+    any "food/drink" art will have the name:
+        eatTypeAnimal
+    where "type" is the food/drink (milk/bone/fish/etc)
+    and "animal" is the animal included in the art
+*/
+petEagle
             __            
           _/ '>           
     _ _.-'(   )'-._ _     
@@ -6,7 +26,8 @@ eagle
           |/-\|           
           Y   Y
 
-eagleFlap
+actionFlapEagle
+
      _\|      __     |/_
    _-  \_   _/"->   _/  -_
    -_    `-'(   )`-'    _-
@@ -14,7 +35,8 @@ eagleFlap
             |/-\|
             Y   Y
 
-eagleSpeak
+speakEagle
+
           .-"""""""-.              ／￣￣￣￣￣\
         .'       __  \_            |　  Caw!   |
        /        /  \/  \           /へ.＿＿＿＿/
@@ -30,7 +52,8 @@ eagleSpeak
     /'-=-'`  '-'   '--'\
    /                    \
 
-cat
+petCat
+
     /\_____/\
    /  o   o  \
   ( ==  ^  == )
@@ -39,7 +62,8 @@ cat
  ( (  )   (  ) )
 (__(__)___(__)__)
 
-catBox
+actionBoxCat
+
   ,-.       _,---._ __  / \
  /  )    .-'       `./ /   \
 (  (   ,'            `/    /|
@@ -53,7 +77,7 @@ catBox
   `--'   `--'
   
   catSpeak
-                                             
+                                      
        :"-.          .-";                    
        |:`.`.__..__.'.';|                    
        || :-"      "-; ||            
@@ -83,6 +107,7 @@ catBox
   "-:___..--"      "--..___;-"
   
   god
+  
                               ..,,,,,,,,,.. 
                      .,;%%%%%%%%%%%%%%%%%%%%;,. 
                    %%%%%%%%%%%%%%%%%%%%////%%%%%%, .,;%%;, 
@@ -113,6 +138,7 @@ catBox
 %%@@@@@@@@@@@@@@@00000000000000000000000000000@@@@@@@@@%%%%%
 
 godSpeak
+
          __
         /  \
        / ..|\     ／￣￣￣￣￣\
@@ -125,6 +151,7 @@ godSpeak
   \____)|_) \_)
   
 eatFish
+
      |\    
     |  \    
 |\ /    .\ 
@@ -133,7 +160,8 @@ eatFish
     |  /
      |/
 
-eatMilk
+eatMilkCat
+
    _________
   | _______ |
  / \         \
@@ -153,6 +181,7 @@ eatMilk
 |___|_______\_|
 
 eatWater
+
      ,.--'`````'--., 
     (\'-.,_____,.-'/)
      \\-.,_____,.-//
@@ -165,11 +194,13 @@ eatWater
      `'-.,_____,.-''
      
 eatBone
+
  _       _
 (_'-----'_)
 (_.'""""._)
 
 doBall
+
   _._
 .'--.`.    
 |  .' |  
