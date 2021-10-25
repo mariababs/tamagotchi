@@ -18,7 +18,7 @@ Food/Drink Art
     where "type" is the food/drink (milk/bone/fish/etc)
     and "animal" is the animal included in the art
 */
-petEagle
+*petEagle
             __            
           _/ '>           
     _ _.-'(   )'-._ _     
@@ -26,7 +26,7 @@ petEagle
           |/-\|           
           Y   Y
 
-petCat
+*petCat
 
     /\_____/\
    /  o   o  \
@@ -36,7 +36,7 @@ petCat
  ( (  )   (  ) )
 (__(__)___(__)__)
 
-god
+*dog
   
                               ..,,,,,,,,,.. 
                      .,;%%%%%%%%%%%%%%%%%%%%;,. 
@@ -68,7 +68,7 @@ god
 %%@@@@@@@@@@@@@@@00000000000000000000000000000@@@@@@@@@%%%%%
 
 
-eatMilkCat
+*eatMilkCat
 
    _________    
   | _______ |          :"-.          .-"; 
@@ -88,7 +88,7 @@ eatMilkCat
 |   |      \  |  :`-   .'              `.   -'; 
 |___|_______\_|  ;    /                  \    : 
 
-eatWaterDog
+*eatWaterDog
 
                            __
  ,.--'`````'--.,          /  \
@@ -102,7 +102,7 @@ eatWaterDog
  |             |    \____)|_) \_)
  `'-.,_____,.-''  
      
-eatBone
+*eatBone
 
           __
          /  \
@@ -116,7 +116,7 @@ eatBone
    \____)|_) \_) (_.'""""._)
 
 
-eatFishCat
+*eatFishCat
 
     /\_____/\          |\
    /  o   o  \        |  \
@@ -126,7 +126,7 @@ eatFishCat
  ( (  )   (  ) )      |  /
 (__(__)___(__)__)      |/
 
-eatFishEagle
+*eatFishEagle
 
                           |\
           __             |  \
@@ -136,7 +136,7 @@ eatFishEagle
         |/-\|            |  /
         Y   Y             |/
 
-actionBallDog
+*actionBallDog
 
           __
          /  \
@@ -149,7 +149,7 @@ actionBallDog
   \   /_ || \\_   |  .' |
    \____)|_) \_)   `--`'
 
-actionBallCat
+*actionBallCat
 
     /\_____/\      
    /  o   o  \    
@@ -159,7 +159,7 @@ actionBallCat
  ( (  )   (  ) )  |  .' |
 (__(__)___(__)__)  `--`'
 
-actionBallEagle
+*actionBallEagle
 
           __ 
         _/ O>        
@@ -168,7 +168,7 @@ actionBallEagle
         |/-\|        |  .' |
         Y   Y         `--`'
 
-actionToyCat
+*actionToyCat
 
     /\_____/\            /\\
    /  o   o  \          /  \\
@@ -178,7 +178,7 @@ actionToyCat
  ( (  )   (  ) )     *         \\
 (__(__)___(__)__)               \\
 
-actionBoxCat
+*actionBoxCat
 
   ,-.       _,---._ __  / \
  /  )    .-'       `./ /   \
@@ -192,7 +192,7 @@ actionBoxCat
   )  |  \  `.___________|/
   `--'   `--'
 
-actionSpeakDog
+*actionSpeakDog
 
          __
         /  \
@@ -205,7 +205,7 @@ actionSpeakDog
  \   /_ || \\_
   \____)|_) \_)
 
-actionSpeakCat
+*actionSpeakCat
                                                
        :"-.          .-";                      
        |:`.`.__..__.'.';|                      
@@ -235,7 +235,7 @@ actionSpeakCat
  : / ,       / "" \       . \ ;            
   "-:___..--"      "--..___;-"
 
-actionSpeakEagle
+*actionSpeakEagle
 
         .-"""""""-.              ／￣￣￣￣￣\
       .'       __  \_            |　  Caw!   |
@@ -252,7 +252,7 @@ actionSpeakEagle
   /'-=-'`  '-'   '--'\
  /                    \
 
-actionFlapEagle
+*actionFlapEagle
 
      _\|      __     |/_
    _-  \_   _/"->   _/  -_
@@ -261,7 +261,7 @@ actionFlapEagle
             |/-\|
             Y   Y
 
-eatWaterEagle
+*eatWaterEagle
 
          .-"""""""-. 
        .'       __  \_            ,.--'`````'--., 
