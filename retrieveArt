@@ -1,0 +1,30 @@
+// Eleanor Pahl Retrieve Art Mini-Module
+#include <stdio.h>
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+    char newArt = '*';
+    string findArt = "petDog";
+    ifstream fin("art.txt");
+    string line;
+    while (getline(fin,line)) {
+        if (line[0]==newArt) {
+            if (line.find(newArt+findArt)!=string::npos) {
+                int keepPrinting = 1;
+                while (keepPrinting) {
+                    getline(fin,line);
+                    if (line[0]!=newArt)
+                        cout<<line<<endl;
+                    else
+                        keepPrinting = 0; 
+                }
+            }
+        }
+    }
+
+    return 0;
+}
