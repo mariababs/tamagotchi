@@ -5,10 +5,8 @@
 
 using namespace std;
 
-int main()
-{
+void retrieveArt(string findArt) {
     char newArt = '*';
-    string findArt = "petDog";
     ifstream fin("art.txt");
     string line;
     while (getline(fin,line)) {
@@ -20,11 +18,16 @@ int main()
                     if (line[0]!=newArt)
                         cout<<line<<endl;
                     else
-                        keepPrinting = 0; 
+                        keepPrinting = 0;
+                    
                 }
             }
         }
     }
+}
 
+int main() {
+    retrieveArt("petCat");
+    
     return 0;
 }
