@@ -190,7 +190,7 @@ void branchDog() {
 void branchCat() {
     Cat p;
     string choice;
-    cout<<"What would you like to do with "<<p.getName()<<"? Feed or Interact?";
+    cout<<"What would you like to do with "<<p.getName()<<"? Feed or Interact?" ;
     getline(cin,choice);
     choice = lowercase(choice);
 }
@@ -198,7 +198,7 @@ void branchCat() {
 void branchEagle() {
     Eagle p;
     string choice;
-    cout<<"What would you like to do with"<<p.getName()<<"? Feed or Interact?";
+    cout<<"What would you like to do with "<<p.getName()<<"? Feed or Interact?" ;
     getline(cin,choice);
     choice = lowercase(choice);
 }
