@@ -1,9 +1,13 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <iomanip>
+#include<algorithm>
 
 using namespace std;
 
+void retrieveArt(string);
+string lowercase(string);
 // abstract base class
 class Pet { 
     private:
@@ -59,7 +63,7 @@ class Dog : public Pet {
             string n;
             getline(cin,n);
             Pet::setName(n);
-
+            retrieveArt("petDog");
             Pet::setHunger(80);
             Pet::setMood(80);
         }
@@ -67,7 +71,23 @@ class Dog : public Pet {
             // goodbye pet, check pet journal/log
         }
         void eat() {
+            string food;
+            cout<<"Which food for "<<Pet::getName()<<"?"<<" Water or Bone? ";
             
+            getline(cin,food);
+            food = lowercase(food);
+            if (food=="water") {
+                retrieveArt("eatWaterDog");
+                Pet::setHunger(10);
+            }
+            else if (food=="bone") {
+                retrieveArt("eatBoneDog");
+                Pet::setHunger(15);
+            }
+            else {
+                string errMsg = "Sorry, that food choice doesn't exist.";
+                throw errMsg;
+            }
         }
         void action() {
 
@@ -83,7 +103,7 @@ class Cat : public Pet {
             string n;
             getline(cin,n);
             Pet::setName(n);
-
+            retrieveArt("petCat");
             Pet::setHunger(80);
             Pet::setMood(80);
         }
@@ -91,7 +111,7 @@ class Cat : public Pet {
             // goodbye pet, check pet journal/log
         }
         void eat() {
-            
+           
         }
         void action() {
             
@@ -100,11 +120,12 @@ class Cat : public Pet {
 
 class Eagle : public Pet { 
     private: 
-
+        
     public: 
         Eagle() {
             cout << "Your Eagle's name is Ernie.";
             Pet::setName("Eagle");
+            retrieveArt("petEagle");
             Pet::setHunger(80);
             Pet::setMood(80);
         }
@@ -119,8 +140,86 @@ class Eagle : public Pet {
         }
 };
 
-int main() {
-
-    return 0;
+string lowercase(string s) {
+    std::for_each(s.begin(), s.end(), [](char & c){
+        c = tolower(c);
+    });
+    return s;
 }
 
+void retrieveArt(string findArt) {
+    char newArt = '*';
+    ifstream fin("Ascii Art.txt");
+    string line;
+    while (getline(fin,line)) {
+        if (line[0]==newArt) {
+            if (line.find(newArt+findArt)!=string::npos) {
+                int keepPrinting = 1;
+                while (keepPrinting) {
+                    getline(fin,line);
+                    if (line[0]!=newArt)
+                        cout<<line<<endl;
+                    else
+                        keepPrinting = 0;
+                    
+                }
+            }
+        }
+    }
+}
+
+void branchDog() {
+    Dog p;
+    string choice;
+    cout<<"What would you like to do with "<<p.getName()<<"? Feed or Interact? ";
+    getline(cin,choice);
+    choice = lowercase(choice);
+    if (choice=="feed") {
+        p.eat();
+    }
+    else if (choice=="Interact") {
+        
+    }
+    else {
+        string errMsg = "Not a valid choice.";
+        throw errMsg;
+    }
+    
+}
+
+void branchCat() {
+    Cat p;
+    string choice;
+    cout<<"What would you like to do with "<<p.getName()<<"? Feed or Interact?";
+    getline(cin,choice);
+    choice = lowercase(choice);
+}
+
+void branchEagle() {
+    Eagle p;
+    string choice;
+    cout<<"What would you like to do with"<<p.getName()<<"? Feed or Interact?";
+    getline(cin,choice);
+    choice = lowercase(choice);
+}
+
+int main() {
+    string pet;
+    cout<<"What pet would you like? Dog, Cat or Eagle? ";
+    getline(cin,pet);
+    pet = lowercase(pet);
+    if (pet=="dog") {
+        branchDog();
+    }
+    else if (pet=="cat") {
+        branchCat();
+    }
+    else if (pet=="eagle") {
+        branchEagle();
+    }
+    else {
+        cout<<"Oops, that is not a valid pet. Try again."<<endl;
+    }
+    
+    return 0;
+}
