@@ -111,7 +111,22 @@ class Cat : public Pet {
             // goodbye pet, check pet journal/log
         }
         void eat() {
-           
+            string food;
+            cout<<"Which food for "<<Pet::getName()<<"?"<<" Milk or Fish? ";
+            getline(cin,food);
+            food = lowercase(food);
+            if (food=="milk") {
+                retrieveArt("eatMilkCat");
+                Pet::setHunger(15);
+            }
+            else if (food=="fish") {
+                retrieveArt("eatFishCat");
+                Pet::setHunger(20);
+            }
+            else {
+                string errMsg = "Sorry, that food choice doesn't exist.";
+                throw errMsg;
+            }
         }
         void action() {
             
@@ -123,7 +138,7 @@ class Eagle : public Pet {
         
     public: 
         Eagle() {
-            cout << "Your Eagle's name is Ernie.";
+            cout << "Your Eagle's name is Ernie." << endl;
             Pet::setName("Eagle");
             retrieveArt("petEagle");
             Pet::setHunger(80);
@@ -133,7 +148,22 @@ class Eagle : public Pet {
             // goodbye pet, check pet journal/log
         }
         void eat() {
-
+            string food;
+            cout<<"Which food for "<<Pet::getName()<<"?"<<" Water or Fish? ";
+            getline(cin,food);
+            food = lowercase(food);
+            if (food=="water") {
+                retrieveArt("eatWaterEagle");
+                Pet::setHunger(15);
+            }
+            else if (food=="fish") {
+                retrieveArt("eatFishEagle");
+                Pet::setHunger(20);
+            }
+            else {
+                string errMsg = "Sorry, that food choice doesn't exist.";
+                throw errMsg;
+            }
         }
         void action() {
             
@@ -177,7 +207,7 @@ void branchDog() {
     if (choice=="feed") {
         p.eat();
     }
-    else if (choice=="Interact") {
+    else if (choice=="interact") {
         
     }
     else {
@@ -190,17 +220,37 @@ void branchDog() {
 void branchCat() {
     Cat p;
     string choice;
-    cout<<"What would you like to do with "<<p.getName()<<"? Feed or Interact?" ;
+    cout<<"What would you like to do with "<<p.getName()<<"? Feed or Interact? ";
     getline(cin,choice);
     choice = lowercase(choice);
+    if (choice=="feed") {
+        p.eat();
+    }
+    else if (choice=="interact") {
+        
+    }
+    else {
+        string errMsg = "Not a valid choice.";
+        throw errMsg;
+    }
 }
 
 void branchEagle() {
     Eagle p;
     string choice;
-    cout<<"What would you like to do with "<<p.getName()<<"? Feed or Interact?" ;
+    cout<<"What would you like to do with "<<p.getName()<<"? Feed or Interact? ";
     getline(cin,choice);
     choice = lowercase(choice);
+    if (choice=="feed") {
+        p.eat();
+    }
+    else if (choice=="interact") {
+        
+    }
+    else {
+        string errMsg = "Not a valid choice.";
+        throw errMsg;
+    }
 }
 
 int main() {
