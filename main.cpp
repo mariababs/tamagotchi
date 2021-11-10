@@ -90,7 +90,24 @@ class Dog : public Pet {
             }
         }
         void action() {
-
+            string act;
+            cout<<"Which action for "<<Pet::getName()<<"?"<<" Speak or Ball? ";
+            
+            getline(cin,act);
+            act = lowercase(act);
+            if (act=="speak") {
+                retrieveArt("actionSpeakDog");
+                Pet::setMood(-1);
+                
+            }
+            else if (act=="ball") {
+                retrieveArt("actionBallDog");
+                Pet::setMood(20);
+            }
+            else {
+                string errMsg = "Sorry, that action choice doesn't exist.";
+                throw errMsg;
+            }
         }
 };
 
@@ -208,7 +225,7 @@ void branchDog() {
         p.eat();
     }
     else if (choice=="interact") {
-        
+        p.action();
     }
     else {
         string errMsg = "Not a valid choice.";
