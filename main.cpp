@@ -146,7 +146,32 @@ class Cat : public Pet {
             }
         }
         void action() {
+            string act;
+            cout<<"Which action for "<<Pet::getName()<<"?"<<" Speak, Ball, Toy or Box? ";
             
+            getline(cin,act);
+            act = lowercase(act);
+            if (act=="speak") {
+                retrieveArt("actionSpeakCat");
+                Pet::setMood(-5);
+                
+            }
+            else if (act=="ball") {
+                retrieveArt("actionBallCat");
+                Pet::setMood(-1);
+            }
+            else if (act=="toy") {
+                retrieveArt("actionToyCat");
+                Pet::setMood(10);
+            }
+            else if (act=="box") {
+                retrieveArt("actionBoxCat");
+                Pet::setMood(20);
+            }
+            else {
+                string errMsg = "Sorry, that action choice doesn't exist.";
+                throw errMsg;
+            }
         }
 };
 
@@ -183,7 +208,28 @@ class Eagle : public Pet {
             }
         }
         void action() {
+            string act;
+            cout<<"Which action for "<<Pet::getName()<<"?"<<" Speak, Flap or Ball? ";
             
+            getline(cin,act);
+            act = lowercase(act);
+            if (act=="speak") {
+                retrieveArt("actionSpeakEagle");
+                Pet::setMood(5);
+                
+            }
+            else if (act=="flap") {
+                retrieveArt("actionFlapEagle");
+                Pet::setMood(0);
+            }
+            else if (act=="ball") {
+                retrieveArt("actionBallEagle");
+                Pet::setMood(-1);
+            }
+            else {
+                string errMsg = "Sorry, that action choice doesn't exist.";
+                throw errMsg;
+            }
         }
 };
 
@@ -244,7 +290,7 @@ void branchCat() {
         p.eat();
     }
     else if (choice=="interact") {
-        
+        p.action();
     }
     else {
         string errMsg = "Not a valid choice.";
@@ -262,7 +308,7 @@ void branchEagle() {
         p.eat();
     }
     else if (choice=="interact") {
-        
+        p.action();
     }
     else {
         string errMsg = "Not a valid choice.";
