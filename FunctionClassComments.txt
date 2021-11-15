@@ -1,0 +1,130 @@
+class Pet { 
+    /*
+    Pet is an abstract base class that contains all of the fields and functions a generic pet would need.
+    */
+
+void setHunger(int amount) { 
+  /*
+  setHunger recieves the hunger update (+/- amount) and adjusts the overall hunger value.
+  */
+  
+int getHunger() {
+  /*
+  getHunger retrieves the hunger from the Pet class' private fields.
+  */
+  
+void setMood(int amount) { 
+  /*
+  setMood recieves the mood update (+/- amount) and adjusts the overall mood value.
+  */
+  
+int getMood() {
+  /*
+  getMood retrieves the mood from the Pet class' private fields.
+  */
+  
+void setName(string n) { 
+  /*
+  setName sets the Pet's private name field to n.
+  */
+
+string getName() { 
+  /*
+  getName retrieves the name from the Pet class' private fields.
+  */
+  
+string decideMood() {
+  /*
+  decideMove checks the current mood against the mood bins to categorize the Pet's current state as "Excited," "Happy," "Calm," "Lonely," and "Depressed."
+  */
+  
+class Dog : public Pet {
+  /*
+  Dog is a child of the parent abstract base class, Pet. Dog has its own actions and food possibilities.
+  */
+
+Dog() {
+  /*
+  The constructor Dog function asks for the Dog's name and sets the private name field. 
+  It also retrieves the base Dog art and sets initial hunger and mood values.
+  */
+  
+~Dog() {
+  /*
+  The destructor Dog function says goodbye to the pet and asks the user to check the pet log.
+  */
+  
+void eat() {
+  /*
+  eat asks the user which food they would like to feed to their pet.
+  Only the relevant food options are offered, depending on the pet.
+  The selected food art is retrieved and hunger and mood values are updated.
+  */
+  
+void action() {
+  /*
+  action asks the user which action they would like to interact with their pet with.
+  Only the relevant action options are offered, depending on the pet.
+  The selected action art is retrieved and hunger and mood values are updated.
+  */
+
+class Cat : public Pet {
+  /*
+  Cat is a child of the parent abstract base class, Pet. Cat has its own actions and food possibilities.
+  */
+
+Cat(){
+  /*
+  The constructor Cat function asks for the Cat's name and sets the private name field. 
+  It also retrieves the base Cat art and sets initial hunger and mood values.
+  */
+
+~Cat() {
+  /*
+  The destructor Cat function says goodbye to the pet and asks the user to check the pet log.
+  */
+
+class Eagle : public Pet {
+  /*
+  Eagle is a child of the parent abstract base class, Pet. Eagle has its own actions and food possibilities.
+  */
+  
+Eagle() {
+  /*
+  The constructor Eagle function tells the user the name is Ernie and sets the private name field. 
+  It also retrieves the base Cat art and sets initial hunger and mood values.
+  */
+
+~Eagle() {
+  /*
+  The destructor Eagle function says goodbye to the pet and asks the user to check the pet log.
+  */
+
+string lowercase(string s) {
+  /*
+  lowercase accepts a string of any case and returns it as entirely lowercase.
+  */
+  
+void retrieveArt(string findArt) {
+  /*
+  retrieveArt accepts a string that is the name of the ascii art, then locates and prints the art from the "Ascii Art.txt" file.
+  */
+  
+void branchDog() {
+  /*
+  branchDog starts the pet loop process if a Dog pet has been selected.
+  It asks if the user would like to feed or interact with their pet, then loops these two options until exit.
+  */
+  
+void branchEagle() {
+  /*
+  branchEagle starts the pet loop process if a Eagle pet has been selected.
+  It asks if the user would like to feed or interact with their pet, then loops these two options until exit.
+  */
+  
+void branchCat() {
+  /*
+  branchCat starts the pet loop process if a Cat pet has been selected.
+  It asks if the user would like to feed or interact with their pet, then loops these two options until exit.
+  */
+  
