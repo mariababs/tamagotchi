@@ -8,6 +8,9 @@
 using namespace std;
 
 string lowercase(string s) {
+    /*
+    lowercase accepts a string of any case and returns it as entirely lowercase.
+    */
     std::for_each(s.begin(), s.end(), [](char & c){
         c = tolower(c);
     });
@@ -15,6 +18,9 @@ string lowercase(string s) {
 }
 
 string decideMood(int m) {
+    /*
+    decideMove checks the current mood against the mood bins to categorize the Pet's current state as "Excited," "Happy," "Calm," "Lonely," and "Depressed."
+    */
     if (m <= 100 && m >= 90) {
         return "Excited";
     } else if (m <= 89 && m >= 80) {
@@ -38,6 +44,9 @@ ostream& operator<<(ostream &os, const Pet &p){
 }
 
 void retrieveArt(string findArt) {
+    /*
+    retrieveArt accepts a string that is the name of the ascii art, then locates and prints the art from the "Ascii Art.txt" file.
+    */
     char newArt = '*';
     ifstream fin("Ascii Art.txt");
     string line;

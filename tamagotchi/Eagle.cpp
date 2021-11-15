@@ -9,6 +9,10 @@
 using namespace std;
 
 Eagle::Eagle() {
+    /*
+    The constructor Eagle function tells the user the name is Ernie and sets the private name field. 
+    It also retrieves the base Cat art and sets initial hunger and mood values.
+    */
     cout << "Your Eagle's name is Ernie." << endl;
     Pet::setName("Eagle");
     retrieveArt("petEagle");
@@ -16,6 +20,9 @@ Eagle::Eagle() {
     Pet::setMood(80);
 }
 Eagle::~Eagle() {
+    /*
+    The destructor Eagle function says goodbye to the pet and asks the user to check the pet log.
+    */
     cout<<"Goodbye! Check your pet journal Ernie_the_eagle.txt!"<<endl;
 }
 void Eagle::eat(ofstream &fout) {

@@ -3,6 +3,9 @@
 using namespace std;
 
 class Eagle : public Pet { 
+    /*
+    Eagle is a child of the parent abstract base class, Pet. Eagle has its own actions and food possibilities.
+    */
     public: 
         Eagle();
         ~Eagle();

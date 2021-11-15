@@ -9,6 +9,10 @@
 using namespace std;
 
 Dog::Dog(){
+    /*
+    The constructor Dog function asks for the Dog's name and sets the private name field. 
+    It also retrieves the base Dog art and sets initial hunger and mood values.
+    */
     cout << "What is you dog's name: " << ends;
     string n;
     getline(cin,n);
@@ -18,6 +22,9 @@ Dog::Dog(){
     Pet::setMood(80);
 }
 Dog::~Dog() {
+    /*
+    The destructor Dog function says goodbye to the pet and asks the user to check the pet log.
+    */
     cout<<"Goodbye! Check your pet journal "<<Pet::getName()<<"_the_dog.txt!"<<endl;
 }
 void Dog::eat(ofstream &fout) {

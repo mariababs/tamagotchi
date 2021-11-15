@@ -9,6 +9,10 @@
 using namespace std;
 
 Cat::Cat(){
+    /*
+    The constructor Cat function asks for the Cat's name and sets the private name field. 
+    It also retrieves the base Cat art and sets initial hunger and mood values.
+    */
     cout << "What is you cat's name: " << ends;
     string n;
     getline(cin,n);
@@ -18,6 +22,9 @@ Cat::Cat(){
     Pet::setMood(80);
 }
 Cat::~Cat() {
+    /*
+    The destructor Cat function says goodbye to the pet and asks the user to check the pet log.
+    */
     cout<<"Goodbye! Check your pet journal "<<Pet::getName()<<"_the_cat.txt!"<<endl;
 }
 void Cat::eat(ofstream &fout) {
